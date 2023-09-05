@@ -1,8 +1,12 @@
 from django.shortcuts import render
 from django.http import response
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from rest_framework.serializers import Serializer
+from . models import Note
 # Create your views here.
 
-#  
+@api_view(['GET'])
 def getRoutes(request):
 
     routes = [
